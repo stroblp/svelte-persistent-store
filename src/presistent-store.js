@@ -1,22 +1,33 @@
 import { writable, get } from "svelte/store";
 import localforage from "localforage";
 
-export const writableIndexedDB = (
+export const presistentStore = (
     storeKey,
     initVal,
+    driver = "INDEXEDDB",
     storeName = "default-store",
-    dbName = "svelte-presistent-db",
-    driver = "INDEXEDDB"
+    dbName = "svelte-presistent-db"
 ) => {
-    const db = localforage.createInstance({
-        name: dbName,
-        storeName,
-        driver:localforage[driver]
-    });
 
     const store = writable(initVal);
+
+    //create persistent store
+    let db = localforage.createInstance({
+        name: dbName,
+        storeName,
+        driver: localforage[driver]
+    });
+
+    //check if driver is OK
+    db.ready().then(function () {
+        readValueToStore();
+    }).catch(function (e) {
+        store.set(undefined);
+    });
+
     let storeReady = false;
 
+    //read value in persistent store
     function readValueToStore() {
         db.getItem(storeKey).then((value) => {
             if (value === null) {
@@ -27,8 +38,7 @@ export const writableIndexedDB = (
         });
     }
 
-    readValueToStore();
-
+    //return custom store
     return {
         subscribe: store.subscribe,
         update: (value) => {
