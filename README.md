@@ -1,4 +1,4 @@
-# persistent store for svelte based on svelte custom store and localforage (indexeddb,websql,localstorage)
+# persistent store for svelte, based on svelte custom store with localforage (indexeddb,websql,localstorage)
 
 https://stroblp.github.io/svelte-persistent-store/
 
