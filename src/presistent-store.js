@@ -2,24 +2,25 @@ import { writable, get } from "svelte/store";
 import localforage from "localforage";
 
 export const writableIndexedDB = (
-    key,
-    initial,
+    storeKey,
+    initVal,
     storeName = "default-store",
-    dbName = "svelte-presistent-db"
+    dbName = "svelte-presistent-db",
+    driver = "INDEXEDDB"
 ) => {
     const db = localforage.createInstance({
         name: dbName,
         storeName,
+        driver:localforage[driver]
     });
 
-    const store = writable(initial);
+    const store = writable(initVal);
     let storeReady = false;
 
     function readValueToStore() {
-        db.getItem(key).then((value) => {
+        db.getItem(storeKey).then((value) => {
             if (value === null) {
-                value = initial;
-                // db.setItem(key, value)
+                value = initVal;
             }
             storeReady = true;
             store.set(value);
@@ -34,13 +35,13 @@ export const writableIndexedDB = (
             store.update(value);
 
             if (storeReady) {
-                db.setItem(key, get(store));
+                db.setItem(storeKey, get(store));
             }
         },
         set: (value) => {
             store.set(value);
             if (storeReady) {
-                db.setItem(key, value);
+                db.setItem(storeKey, value);
             }
         },
     };
