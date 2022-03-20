@@ -1,5 +1,14 @@
 # persistent store for svelte wiht localforage (indexeddb,websql,localstorage)
 
+https://stroblp.github.io/svelte-persistent-store/
+
+counter value is restored after refresh
+
+
+To use simply copy persistent-store.js and install localforage:
+
+    npm install localforage
+
 options:
 
     storeKey:
@@ -18,8 +27,5 @@ options:
         INDEXEDDB (default)
         WEBSQL
         LOCALSTORAGE
-        -if driver initialization process has failed store will return undefined
+        -if driver initialization process has failed store will return undefined    
 
-https://stroblp.github.io/svelte-persistent-store/
-
-counter value is restored after refresh
