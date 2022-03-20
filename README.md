@@ -1,6 +1,7 @@
 # A Svelte template to use gitpod with vite
 
 options:
+
     storeKey:
         key value for the persistent db
 
