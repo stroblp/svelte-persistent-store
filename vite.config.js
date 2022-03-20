@@ -13,5 +13,6 @@ export default defineConfig({
         clientPort: 443
       }
       : true
-  }
+  },
+  base:"/svelte-persistent-store/"
 })
