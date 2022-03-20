@@ -1,4 +1,4 @@
-# A Svelte template to use gitpod with vite
+# persistent store for svelte wiht localforage (indexeddb,websql,localstorage)
 
 options:
 
