@@ -18,6 +18,7 @@ options:
         INDEXEDDB (default)
         WEBSQL
         LOCALSTORAGE
+        -if driver initialization process has failed store will return undefined
 
 https://stroblp.github.io/svelte-persistent-store/
 
