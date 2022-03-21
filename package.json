@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "svelte-persistent-store",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,9 @@
     "vite": "^2.8.6"
   },
   "dependencies": {
+    "svelte": "^3.38.3",
     "localforage": "^1.10.0"
-  }
+  },
+  "main": "lib/presistent-store.js"
+
 }

@@ -1,4 +1,4 @@
-# what is this:
+# what is this
 
 A persistent store for svelte, based on svelte custom store with localforage (indexeddb,websql,localstorage)
 

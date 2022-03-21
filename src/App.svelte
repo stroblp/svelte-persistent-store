@@ -1,5 +1,5 @@
 <script>
-	import { presistentStore } from "./presistent-store";
+	import  presistentStore  from "../lib/presistent-store";
 	let countlocalStorage = presistentStore("counter-value", 0, "LOCALSTORAGE");
 	let countWebSQL = presistentStore("counter-value", 0,"WEBSQL");
 	let countIndexedDB = presistentStore("counter-value", 0);

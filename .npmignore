@@ -1,0 +1,7 @@
+/public/build/
+/src
+/dist
+.gitpod.yml
+index.html
+package-lock.json
+vite.config.js
