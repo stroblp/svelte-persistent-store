@@ -14,7 +14,7 @@ Svelte writable data is written into the choosen persisten store. In the example
 
 Usage..
 
-...
+```
 <script>
 	import persistentStore from "svelte-writable-persistent-store"
 	let countIndexedDB = persistentStore("counter-value", 0);
@@ -24,8 +24,7 @@ Usage..
 <span>{$countIndexedDB}</span>
 <button on:click={() => ($countIndexedDB += 1)}>+</button>
 <button on:click={() => ($countIndexedDB =0)}>Clear</button>
-
-...
+```
 
 ## options
 
