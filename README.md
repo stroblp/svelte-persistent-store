@@ -10,7 +10,7 @@ Svelte writable data is written into the choosen persisten store. In the example
 
 # install
 
-`npm i svelte-writable-persistent-store`
+`npm i @stroblp/svelte-persistent-writable`
 
 Usage..
 

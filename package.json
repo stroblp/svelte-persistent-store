@@ -1,6 +1,6 @@
 {
-  "name": "svelte-writable-persistent-store",
-  "version": "1.0.2",
+  "name": "@stroblp/svelte-persistent-writable",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
