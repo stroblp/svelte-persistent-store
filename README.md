@@ -28,15 +28,17 @@ Usage..
 
 ## options
 
-storeKey - key value for the persistent db
+* storeKey - key value for the persistent db
 
 * initVal - intial value to be stored in persistent db
+
+* driver - INDEXEDDB (default) | WEBSQL | LOCALSTORAGE
 
 * storeName - store name: default value is set to "default-store"
 
 * dbName - DB name: default value is set to "svelte-presistent-db"
 
-* driver - INDEXEDDB (default) | WEBSQL | LOCALSTORAGE
+
         
 if driver initialization process has failed store will return undefined    
 
