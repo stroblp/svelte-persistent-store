@@ -1,15 +1,20 @@
-# persistent store for svelte, based on svelte custom store with localforage (indexeddb,websql,localstorage)
+# what is this:
+
+A persistent store for svelte, based on svelte custom store with localforage (indexeddb,websql,localstorage)
+
+# example
 
 https://stroblp.github.io/svelte-persistent-store/
 
 Svelte writable data is written into the choosen persisten store. In the example, counter value is restored after page reload.
 
+# install
 
 To use simply copy persistent-store.js and install localforage:
 
     npm install localforage
 
-options:
+## options
 
     storeKey:
         key value for the persistent db
