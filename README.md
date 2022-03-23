@@ -17,7 +17,7 @@ Usage..
 ```
 <script>
 	import persistentStore from "svelte-writable-persistent-store"
-	let countIndexedDB = persistentStore("counter-value", 0);
+	let countIndexedDB = presistentStore({storeKey:"counter-value",initVal:0});
 </script>
 
 <button on:click={() => ($countIndexedDB -= 1)}>-</button>

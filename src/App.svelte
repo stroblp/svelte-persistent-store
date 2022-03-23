@@ -1,8 +1,8 @@
 <script>
 	import  presistentStore  from "../lib/presistent-store";
-	let countlocalStorage = presistentStore("counter-value", 0, "LOCALSTORAGE");
-	let countWebSQL = presistentStore("counter-value", 0,"WEBSQL");
-	let countIndexedDB = presistentStore("counter-value", 0);
+	let countlocalStorage = presistentStore({driver:"LOCALSTORAGE",initVal:0,storeKey:"counter-value"});
+	let countWebSQL = presistentStore({driver:"WEBSQL",initVal:0,storeKey:"counter-value"});
+	let countIndexedDB = presistentStore({storeKey:"counter-value",initVal:0});
 </script>
 
 <p>localstorage:</p>
