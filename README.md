@@ -17,10 +17,10 @@ Usage..
 ```
 <script>
 	import persistentStore from "svelte-writable-persistent-store"
-	let countIndexedDB = presistentStore(storeKey:"counter-value",initVal:0,    {
-        driver = "INDEXEDDB",
-        storeName = "default-store",
-        dbName = "svelte-presistent-db" });
+	let countIndexedDB = presistentStore(storeKey:"counter-value",initVal:0,            {
+        driver : "INDEXEDDB",
+        storeName : "default-store",
+        dbName : "svelte-presistent-db" });
 </script>
 
 <button on:click={() => ($countIndexedDB -= 1)}>-</button>
