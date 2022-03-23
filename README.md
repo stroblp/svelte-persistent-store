@@ -17,7 +17,10 @@ Usage..
 ```
 <script>
 	import persistentStore from "svelte-writable-persistent-store"
-	let countIndexedDB = presistentStore({storeKey:"counter-value",initVal:0});
+	let countIndexedDB = presistentStore(storeKey:"counter-value",initVal:0,    {
+        driver = "INDEXEDDB",
+        storeName = "default-store",
+        dbName = "svelte-presistent-db" });
 </script>
 
 <button on:click={() => ($countIndexedDB -= 1)}>-</button>
@@ -25,12 +28,13 @@ Usage..
 <button on:click={() => ($countIndexedDB += 1)}>+</button>
 <button on:click={() => ($countIndexedDB =0)}>Clear</button>
 ```
-
-## options
+## parameters
 
 * storeKey - key value for the persistent db
 
 * initVal - intial value to be stored in persistent db
+
+## options
 
 * driver - INDEXEDDB (default) | WEBSQL | LOCALSTORAGE
 

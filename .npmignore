@@ -5,3 +5,4 @@
 index.html
 package-lock.json
 vite.config.js
+tsconfig.json
